@@ -1,0 +1,38 @@
+<!-- sur cette page l'utilisateur aura accès au contenu d'un seul acteur qu'il aura séléctionné préalablement 
+    avec la possibilité de revenir sur la page acteur -->
+{% extends 'home/ref.html' %}
+
+{% block title %} PAGE ACTEUR {% endblock %}
+
+
+{% block styles %} {% endblock %}
+
+{% block content %}
+
+<div class="card card-body">
+    <table class="table" style="height: 10em;">
+        <tr>
+            <th style="height: 5em; border: orange 2px solid;" >Photo</th>
+
+        </tr>
+        <tr >
+            <th>Nom</th>
+            <th>Âge</th>
+            <th>Description</th>
+        </tr>  
+
+       
+        <tr>           
+          <td>{{mes_acteurs.nom}}</td>
+          <td>{{mes_acteurs.age}}</td>
+          <td>{{mes_acteurs.description}}</td>
+     
+        </tr>        
+        
+    </table>
+
+    <a href="{% url 'page_acteur' %}" style="margin-right:20m;text-align:center;" class="btn btn-sm btn-info">RETOUR</a>
+
+</div>
+
+{% endblock %}  

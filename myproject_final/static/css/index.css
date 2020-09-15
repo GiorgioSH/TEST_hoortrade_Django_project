@@ -1,0 +1,17 @@
+/* CSS supplémentaire au fichier index.html */
+body{ 
+    background-color: antiquewhite;
+}
+/* .carousel-inner > .item > img {
+    width:640px;
+    height:360px;
+} */
+.carousel {
+    width:640px;
+    height:360px;
+}
+
+.nav-item :hover{
+    background-color: rgba(0, 0, 0, 0.295);
+    color:white
+}

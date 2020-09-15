@@ -1,0 +1,28 @@
+<!-- Cette page qui sert de formulaire sera utilisé lorsque l'utilisateur voudra créer un nouveau acteur, il se retrouvera alors sur un formulaire
+    avec des champs vide
+    Cette page sera aussi utilisé lorsque l'utilisateur voudra modifier les informations sur un acteur, dans ce cas un formulaire pré-rempli contenant 
+    les informations sur cet acteur lui sera envoyé et il aura l'opportunité de modifier les différents champs -->
+{% extends 'home/ref.html' %}
+
+{% block title %} ACTEUR {% endblock %}
+
+{% block styles %} {% endblock %}
+
+{% block content %} 
+
+    <form action="" method="POST">
+
+        <!-- Nous allons utiliser csrf_token pour sécuriser la transimission des données -->
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" name="Submit">
+
+        <!-- <form action="/team_name_url/" method="post"> -->
+<!--   
+        <label for="team_name">Enter name: </label>
+        <input id="team_name" type="text" name="name_field" value="Default name for team.">
+        <input type="submit" value="OK"> -->
+        
+    </form>
+
+{% endblock %}

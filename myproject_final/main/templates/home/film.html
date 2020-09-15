@@ -1,0 +1,53 @@
+<!-- Page film -->
+
+{% extends 'home/ref.html' %}
+
+{% block title %} FILM {% endblock %}
+
+{% block styles %} {% endblock %}
+
+{% block content %}
+<br>
+<body style="background-color: rgb(245, 245, 220);">
+    <div class="row">
+        <div class="col-md">
+            <div class="card card-bod">
+                <h5 style="text-align: center;font-weight:1000; font-size:50px;">FILMS</h5>
+            </div>
+            <div class="card card-bod"style="background-color: rgb(245, 245, 220);">
+            <table class="table" style="height: 10em;">
+               
+                <tr >
+                    <th style="height: 5em; border: orange 1px solid;">Photo</th>
+
+                    <th>Avis</th>
+                    <th>Nom</th>
+                    <th>description</th>
+                    <th>Date de sortie</th>
+                </tr>  
+
+                {% for i in mes_films %}
+                <tr>         
+                    <td style="height: 5em; border: orange 1px solid;">emplacement_photo</td>
+                    <td>{{i.avis}}</td>
+                    <td>{{i.nom}}</td>
+                    <td>{{i.description}}</td>
+                    <td>{{i.Date_de_sortie}}</td>
+                  
+                  <!-- <td><a href="{% url 'page_base_acteur' i.id %}" class="btn btn-sm btn-info">VOIR</a></td>
+                  <td><a href="{% url 'form_acteur' %}" class="btn btn-primary btn-sm btn-block">NOUVEAU</a></td>
+                  <td><a href="{% url 'form_acteur_update' i.id %}" class="btn btn-sm btn-info">Update</a></td>
+                  <td><a href="{% url 'delete_acteur' i.id %}" class="btn btn-sm btn-danger">Delete</a></td> -->
+
+                </tr>
+
+                {% endfor %}
+                    
+            </table>
+        </div>
+    </div>
+    
+</div>
+</body>
+
+{% endblock %}

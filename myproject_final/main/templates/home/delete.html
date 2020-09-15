@@ -1,0 +1,26 @@
+<!-- Page Delete -->
+{% extends 'home/ref.html' %}
+
+{% block title %} Page Delete {% endblock %}
+
+
+{% block styles %} {% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+<p>Êtes-vous sûr de vouloir supprimer cet acteur "{{item}}"?</p>
+
+<form action="{% url 'delete_acteur' item.id%}" method="POST">
+
+    {% csrf_token %}
+    <!-- si l'utilisateur n'est pas sur de vouloir supprimer l'élément, il va être redirigé vers la page acteur -->
+    <a href="{% url 'page_acteur' %}">Non</a>
+    <!-- si l'utilisateur décide de supprimer le contenun, l'élément en question sera supprimé de la Base de données et
+        il sera renvoyé vers la page acteur -->
+    <input type="submit" name="confirmer">
+</form>
+
+
+{% endblock %}

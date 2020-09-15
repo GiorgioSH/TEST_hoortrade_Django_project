@@ -1,0 +1,56 @@
+/* Mise en place d'une page CSS de référence/base pour toutes les autres pages */
+body{
+    background-color: rgb(245, 245, 220);
+}
+
+.navbar navbar-expand-lg navbar-dark bg-dark{
+    /* border : solid 5px black; */
+    justify-content: center;
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 100px;
+    display: flex;
+}
+.navbar-nav{
+    justify-content: center;
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 100px;
+    display: flex;
+}
+.nav-item active{
+    justify-content: center;
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 100px;
+    display: flex;
+    /* background-color: rgba(255, 197, 71, 0.733); */
+}
+li{
+    /* background-color: sandybrown; */
+    justify-content: center;
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 100px;
+    display: flex;
+    background-color: teal;
+}
+.nav-item{
+    flex-shrink: 1;
+    flex-grow: 1;
+    /* flex-basis: 100px; */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid black;
+    background-color: teal;
+}
+footer{
+    margin: 0%;
+    padding: 0%;
+    height: 5% ;
+}
+.nav-item :hover{
+    background-color: rgba(0, 0, 0, 0.295);
+    color:white
+}
